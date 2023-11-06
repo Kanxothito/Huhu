@@ -955,7 +955,7 @@ async def shortlink(bot, message):
         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /shortlink ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/shortlink paisakamalo.com 16badb4cdfbd26689b88c28d4385b24b5ec85d81\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://paisakamalo.in/ref/104594076436939082113 ]]]\n\nIf you have any Doubts, Feel Free to Ask me - @KUSHALHK</b>")
+        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /shortlink ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/shortlink ez4short.xyz 12b2d8281afa6d870f9b44bd0cba166704c7ea50\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://ez4short.xyz ]]]\n\nIf you have any Doubts, Feel Free to Ask me - @tech_devloper</b>")
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         grpid = message.chat.id
         title = message.chat.title
@@ -971,7 +971,7 @@ async def shortlink(bot, message):
     try:
         command, shortlink_url, api = data.split(" ")
     except:
-        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink paisakamalo.com 16badb4cdfbd26689b88c28d4385b24b5ec85d81</code></b>")
+        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink ez4short.xyz 12b2d8281afa6d870f9b44bd0cba166704c7ea50</code></b>")
     reply = await message.reply_text("<b>Please Wait...</b>")
     shortlink_url = re.sub(r"https?://?", "", shortlink_url)
     shortlink_url = re.sub(r"[:/]", "", shortlink_url)
